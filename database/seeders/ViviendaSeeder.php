@@ -14,8 +14,8 @@ class ViviendaSeeder extends Seeder
     public function run(): void
     {
         Vivienda::create([
-            'direccion' => 'Aranguren al 500 Inmueble Para Vivienda Y Uso Profesional',
-            'descripcion' => 'Vivienda de dos pisos que se unen por la escalera interna, entrada independiente para ambas unidades, El primer piso contiene 2 habitaciones amplias con placard incorporado completo con yacuzzi, el precio del inmueble puede ser modificado sin previo aviso, con expensas',
+            'direccion' => 'Aranguren al 500',
+            'descripcion' => 'Inmueble Para Vivienda Y Uso Profesional. Vivienda de dos pisos que se unen por la escalera interna, entrada independiente para ambas unidades, El primer piso contiene 2 habitaciones amplias con placard incorporado completo con yacuzzi, el precio del inmueble puede ser modificado sin previo aviso, con expensas',
             'Barrio'=>'Caballito',
             'ciudad' => 'Capital Federal',
             'provincia' => 'Buenos Aires',
