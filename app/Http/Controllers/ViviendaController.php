@@ -37,9 +37,16 @@ class ViviendaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Vivienda $vivienda)
+    public function show($id)
     {
-        //
+        $vivienda = Vivienda::with('imagenes')->find($id);
+
+        //dd($vivienda);
+        if(!$vivienda){
+            return response()->json(['message'=>'vivienda no encontrada',404]);
+        }
+
+        return response()->json($vivienda, 200);
     }
 
     /**

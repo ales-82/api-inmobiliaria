@@ -12,6 +12,7 @@ use App\Http\Controllers\ViviendaController;
 Route::post('/registro',[AuthController::class,'register']);
 Route::post('/login',[AuthController::class,'login']);
 Route::get('/viviendas',[ViviendaController::class,'index']);
+Route::get('/vivienda/{id}', [ViviendaController::class,'show']);
 /*Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');*/
