@@ -11,11 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('image_viviendas', function (Blueprint $table) {
+        Schema::create('roles', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('vivienda_id');
-            $table->foreign('vivienda_id')->references('id')->on('viviendas')->onUpdate('cascade')->onDelete('no action');
-            $table->string('ruta_imagen');
+            $table->string('perfil');
             $table->timestamps();
         });
     }
@@ -25,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('image_viviendas');
+        Schema::dropIfExists('roles');
     }
 };
